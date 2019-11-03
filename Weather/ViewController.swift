@@ -16,26 +16,27 @@ class ViewController: UIViewController {
 //    }
     
 
+
     @IBOutlet weak var myLabel: UILabel!
-    
+ 
     @IBOutlet weak var mySunrise: UIImageView!
     @IBOutlet weak var myNoon: UIImageView!
     @IBOutlet weak var mySunset: UIImageView!
     @IBOutlet weak var myNight: UIImageView!
-    
+  
     @IBOutlet weak var myButton: UIButton! {
-        didSet {
-                    myButton.setTitle("Change SUN", for: .normal) // .normal состояние кнопки
-                    myButton.layer.cornerRadius = 10
-                    myButton.backgroundColor = .orange
-                    myButton.setTitleColor(.white, for: .normal)
-                  }
-    }
-    
+            didSet {
+                        myButton.setTitle("Change SUN", for: .normal) // .normal состояние кнопки
+                        myButton.layer.cornerRadius = 10
+                        myButton.backgroundColor = .orange
+                        myButton.setTitleColor(.white, for: .normal)
+                      }
+        }
     
     @IBAction func myButtonTap(_ sender: UIButton) {
-        switch myLabel.text {
-        case "Defaul Text":
+    
+    switch myLabel.text {
+        case "Default Text":
             myLabel.text = "Рассвет"
             mySunrise.tintColor = .red
             myNoon.tintColor = .blue
